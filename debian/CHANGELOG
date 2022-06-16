@@ -1,0 +1,15 @@
+Changes:
+
+2019-1-2
+
+	Changed the update process to preserve all settings/files/logs created by user/server.
+	Changed to a new smaller base image (still debian).
+
+2019-1-3
+
+	Added an automatic check for new teamspeak server verstion on startup.
+	added more information output to indicate what is happening in the docker logs.
+
+2019-1-5
+
+	changed the way user files are preserved during update process now it is much faster.
