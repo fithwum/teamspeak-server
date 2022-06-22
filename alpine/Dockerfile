@@ -1,4 +1,5 @@
 FROM alpine:latest
+LABEL maintainer "fithwum"
 
 # URL's for files
 ARG INSTALL_SCRIPT=https://raw.githubusercontent.com/fithwum/teamspeak-server/master/alpine/files/Install_Script.sh

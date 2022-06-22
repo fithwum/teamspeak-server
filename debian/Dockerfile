@@ -1,4 +1,5 @@
 FROM fithwum/debian-base:bullseye
+LABEL maintainer "fithwum"
 
 # URL's for files
 ARG INSTALL_SCRIPT=https://raw.githubusercontent.com/fithwum/teamspeak-server/master/debian/files/Install_Script.sh
