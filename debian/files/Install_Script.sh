@@ -90,6 +90,6 @@ chmod +x /ts3server/ts3server
 # Run teamspeak server.
 echo " "
 echo "INFO ! Starting Teamspeak server ${TS_VERSION}"
-exec /ts3server/ts3server_minimal_runscript.sh inifile=ts3server.ini start
+exec /ts3server/ts3server_minimal_runscript.sh inifile=ts3server.ini
 
 exit
