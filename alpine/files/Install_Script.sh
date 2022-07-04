@@ -44,7 +44,7 @@ if [ -e /ts3server/ts3server_minimal_runscript.sh ]
 	else
 		echo " "
 		echo "WARNING ! ts3server_minimal_runscript.sh not found ... will download now."
-			wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/master/scripts/ts3server_minimal_runscript.sh -O /ts3temp/inifiles/ts3server_minimal_runscript.sh
+			wget --no-cache https://raw.githubusercontent.com/fithwum/teamspeak-server/master/files/ts3server_minimal_runscript.sh -O /ts3temp/inifiles/ts3server_minimal_runscript.sh
 			cp /ts3temp/inifiles/ts3server_minimal_runscript.sh /ts3server/
 			rm -fr /ts3temp/ts3server_minimal_runscript.sh
 fi
@@ -54,7 +54,7 @@ if [ -e /ts3server/ts3db_mariadb.ini ]
 	else
 		echo " "
 		echo "WARNING ! ts3db_mariadb.ini not found ... will download now."
-			wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/master/files/ts3db_mariadb.ini -O /ts3temp/inifiles/ts3db_mariadb.ini
+			wget --no-cache https://raw.githubusercontent.com/fithwum/teamspeak-server/master/files/ts3db_mariadb.ini -O /ts3temp/inifiles/ts3db_mariadb.ini
 			cp /ts3temp/inifiles/ts3db_mariadb.ini /ts3server/
 			rm -fr /ts3temp/inifiles/ts3db_mariadb.ini
 fi
@@ -64,9 +64,19 @@ if [ -e /ts3server/ts3server.ini ]
 	else
 		echo " "
 		echo "WARNING ! ts3server.ini not found ... will download now."
-			wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/master/files/ts3server.ini -O /ts3temp/inifiles/ts3server.ini
+			wget --no-cache https://raw.githubusercontent.com/fithwum/teamspeak-server/master/files/ts3server.ini -O /ts3temp/inifiles/ts3server.ini
 			cp /ts3temp/inifiles/ts3server.ini /ts3server/
 			rm -fr /ts3temp/inifiles/ts3server.ini
+fi
+if [ -e /ts3server/.ts3server_license_accepted ]
+	then
+		echo "INFO ! .ts3server_license_accepted found ... will not download."
+	else
+		echo " "
+		echo "WARNING ! .ts3server_license_accepted not found ... will download now."
+			wget --no-cache https://raw.githubusercontent.com/fithwum/teamspeak-server/master/files/.ts3server_license_accepted -O /ts3temp/.ts3server_license_accepted
+			cp /ts3temp/.ts3server_license_accepted /ts3server/
+			rm -fr /ts3temp/.ts3server_license_accepted
 fi
 
 sleep 1
